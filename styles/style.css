@@ -1,0 +1,125 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* left menu */
+
+aside {
+  width: 70px;
+  background-color: #404354;
+  top: 0;
+  left: 0;
+}
+
+.item {
+  height: 40px;
+  width: 40px;
+  margin: 15px;
+  transition: all 0.2s;
+}
+
+.item:hover {
+  box-shadow: 0px 3px 7px 0px rgb(31, 31, 31);
+  transform: translateY(-2px);
+}
+
+.item-box-activate {
+  border-left: 2px solid #FF6F00 !important;
+}
+
+.menu-icon-active {
+  fill: #fff;
+}
+
+/* ------------ */
+
+.container {
+  max-width: 1200px;
+}
+
+.bell::after {
+  content: attr(data-count);
+  background: #FF6F00;
+  color: #fff;
+  border-radius: 100%;
+  position:absolute;
+  right: -4px;
+  top: -9px;
+  font-size: 10px;
+  padding: 1px 5px;
+}
+
+.search-icon {
+  right: 51%;
+  top: 30%;
+  z-index: 1;
+}
+
+.add-item {
+  box-shadow: 0px 5px 7px 0px rgb(172, 172, 172);
+}
+
+.note {
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  opacity: 0.5;
+}
+
+.arrow-btn:focus {
+  transition: all 0.5s;
+}
+
+.arrow-up {
+  transform: rotateZ(180deg);
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.tooltips {
+  left: 185px;
+  top: 29px;
+}
+
+.attention {
+  color: #FF6F00;
+}
+
+.active {
+  background-color: #FF6F00;
+  color: #fff;
+  border: none
+}
+
+.btn-radio:hover {
+  background-color: #FF6F00;
+  color: #fff;
+  border-color: transparent;
+}
+
+.switch {
+  display: none;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.footer {
+  background-color: #2F3241;
+  z-index: 1;
+}
+
+.social-btn {
+  border-color: #FF6F00;
+}
+/* styling placeholders */
+
+input[type="text"]::placeholder {opacity: 0.5;}
+
+input[name="room-height"]::placeholder {transform: translateX(110px);}
+
+input[name="price"]::placeholder {transform: translateX(75px);}
+
+input[name="square"]::placeholder {transform: translateX(40px);}

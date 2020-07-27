@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>АРЕНДАТА</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="shortcut icon" href="/img/header/logo.svg" type="image/x-icon">
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body class="d-flex flex-column position-relative justify-content-center">
+  <main class="main bg-light">
+    <aside class="side-menu position-absolute p-0 h-100">
+      <div class="menu w-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="item-box border border-dark w-100">
+          <div class="item d-flex justify-content-center align-items-center rounded">
+            <a href="#">
+              <svg class="burger" width="16" height="14" viewBox="0 0 16 14" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.0700684 1C0.0700684 0.447715 0.517784 0 1.07007 0H14.916C15.4683 0 15.916 0.447715 15.916 1C15.916 1.55228 15.4683 2 14.916 2H1.07007C0.517784 2 0.0700684 1.55228 0.0700684 1ZM0.0700684 6.99988C0.0700684 6.44759 0.517784 5.99988 1.07007 5.99988H14.916C15.4683 5.99988 15.916 6.44759 15.916 6.99988C15.916 7.55216 15.4683 7.99988 14.916 7.99988H1.07007C0.517784 7.99988 0.0700684 7.55216 0.0700684 6.99988ZM1.07007 11.9998C0.517784 11.9998 0.0700684 12.4475 0.0700684 12.9998C0.0700684 13.5521 0.517784 13.9998 1.07007 13.9998H14.916C15.4683 13.9998 15.916 13.5521 15.916 12.9998C15.916 12.4475 15.4683 11.9998 14.916 11.9998H1.07007Z"
+                  fill="white" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="item-box item-box-activate border border-dark w-100">
+          <div class="item d-flex justify-content-center align-items-center rounded">
+            <a href="#">
+              <svg class="menu-svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="menu-icon menu-icon-active" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.98185 0.435446C9.60715 0.0679176 10.3824 0.0677301 11.0079 0.434955L19.0126 5.13463C19.6243 5.49377 20 6.15003 20 6.85935L20 17.9999C20 19.1044 19.1046 19.9999 18 19.9999H2C0.895429 19.9999 -1.60932e-06 19.1044 0 17.9999L1.67489e-05 6.85902C1.77622e-05 6.15005 0.375361 5.49406 0.986577 5.1348L8.98185 0.435446ZM18 6.85935L9.99529 2.15967L2.00002 6.85903L2 17.9999H18L18 6.85935Z"
+                  fill="#D9D9DD" />
+                <path class="menu-icon menu-icon-active" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.02834 13.8064C6.02834 12.5324 7.06107 11.4997 8.33501 11.4997H11.6532C12.9271 11.4997 13.9599 12.5324 13.9599 13.8064V19.8832H6.02834V13.8064ZM8.33501 13.4997C8.16564 13.4997 8.02834 13.637 8.02834 13.8064V17.8832H11.9599V13.8064C11.9599 13.637 11.8226 13.4997 11.6532 13.4997H8.33501Z"
+                  fill="#D9D9DD" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="item-box border border-dark w-100">
+          <div class="item d-flex justify-content-center align-items-center rounded">
+            <a href="#">
+              <svg class="menu-svg" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M20.0002 17C21.657 17 23.0002 15.6569 23.0002 14C23.0002 12.3431 21.657 11 20.0002 11C18.3433 11 17.0002 12.3431 17.0002 14C17.0002 15.6569 18.3433 17 20.0002 17ZM20.0002 19C22.7616 19 25.0002 16.7614 25.0002 14C25.0002 11.2386 22.7616 9 20.0002 9C17.2387 9 15.0002 11.2386 15.0002 14C15.0002 16.7614 17.2387 19 20.0002 19Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M26.7107 28C25.8506 25.1091 23.1706 23 20.0002 23C16.8297 23 14.1497 25.1091 13.2896 28H26.7107ZM28.0024 30C28.5547 30 29.006 29.5506 28.9454 29.0016C28.4487 24.5009 24.6333 21 20.0002 21C15.367 21 11.5516 24.5009 11.0549 29.0016C10.9943 29.5506 11.4456 30 11.9979 30H28.0024Z"
+                  fill="#6E6E82" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="item-box border border-dark w-100">
+          <div class="item d-flex justify-content-center align-items-center rounded">
+            <a href="#">
+              <svg class="menu-svg" width="22" height="20" viewBox="0 0 22 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M1.62974 2.44156C4.07969 -0.477811 8.40566 -0.830692 11.2848 1.66152C13.1853 3.30668 13.9732 5.77491 13.5867 8.09349L15.208 8.36835C15.5728 8.43021 15.8737 8.68853 15.9901 9.03983L16.525 10.6546L18.1716 10.9338C18.5365 10.9956 18.8373 11.2539 18.9537 11.6052L19.4886 13.22L21.1352 13.4992C21.6131 13.5802 21.9641 13.9923 21.9681 14.477L22 18.402C22.004 18.8984 21.6432 19.3226 21.1526 19.3984L17.3317 19.9883C17.0416 20.0331 16.7465 19.9482 16.5246 19.7561L9.22034 13.4334C6.97164 14.2761 4.35074 13.8941 2.3978 12.2036C-0.472173 9.71928 -0.812608 5.35185 1.62974 2.44156ZM9.97579 3.17368C7.94447 1.41532 4.89699 1.6595 3.16174 3.72723C1.41888 5.80403 1.66633 8.92519 3.70676 10.6914C5.21575 11.9977 7.28287 12.1981 8.95756 11.3704C9.31834 11.192 9.75085 11.2474 10.0551 11.5108L17.4838 17.9412L19.993 17.5537L19.9749 15.331L18.5613 15.0913C18.1964 15.0295 17.8956 14.7711 17.7792 14.4198L17.2443 12.8051L15.5977 12.5259C15.2328 12.464 14.9319 12.2057 14.8156 11.8544L14.2807 10.2397L12.634 9.96051C12.2692 9.89865 11.9683 9.64033 11.8519 9.28903L11.5978 8.52206C11.5417 8.3526 11.532 8.17121 11.5696 7.99671C11.9433 6.26477 11.3858 4.39421 9.97579 3.17368Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon"
+                  d="M6.84997 5.44791C7.59555 5.44791 8.19995 6.06176 8.19995 6.81898C8.19995 7.57619 7.59555 8.19004 6.84997 8.19004C6.1044 8.19004 5.49999 7.57619 5.49999 6.81898C5.49999 6.06176 6.1044 5.44791 6.84997 5.44791Z"
+                  fill="#6E6E82" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="item-box border border-dark w-100">
+          <div class="item d-flex justify-content-center align-items-center rounded">
+            <a href="#">
+              <svg class="menu-svg" width="18" height="22" viewBox="0 0 18 22" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M18 20C18 21.1046 17.1046 22 16 22H2C0.895432 22 1.83719e-06 21.1046 1.73097e-06 20L0 2C-1.06221e-07 0.895432 0.895429 9.15458e-07 2 8.27672e-07L12.4142 0L18 5.58579L18 20ZM2 20H16L16 7L13 7C11.8954 7 11 6.10457 11 5V2L2 2L2 20ZM13 3.41421L14.5858 5H13V3.41421Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4 15C4 14.4477 4.44772 14 5 14H11C11.5523 14 12 14.4477 12 15C12 15.5523 11.5523 16 11 16H5C4.44772 16 4 15.5523 4 15Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4 11C4 10.4477 4.44772 10 5 10H11C11.5523 10 12 10.4477 12 11C12 11.5523 11.5523 12 11 12H5C4.44772 12 4 11.5523 4 11Z"
+                  fill="#6E6E82" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="item-box border border-dark w-100">
+          <div class="item d-flex justify-content-center align-items-center rounded">
+            <a href="#">
+              <svg class="menu-svg" width="25" height="19" viewBox="0 0 25 19" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M18.8571 8.28571C18.0681 8.28571 17.4285 7.64611 17.4285 6.85714C17.4285 6.06816 18.0681 5.42856 18.8571 5.42856C19.6461 5.42856 20.2857 6.06816 20.2857 6.85714C20.2857 7.64611 19.6461 8.28571 18.8571 8.28571ZM18.8571 10.2857C16.9636 10.2857 15.4285 8.75068 15.4285 6.85714C15.4285 4.96359 16.9636 3.42856 18.8571 3.42856C20.7507 3.42856 22.2857 4.96359 22.2857 6.85714C22.2857 8.75068 20.7507 10.2857 18.8571 10.2857Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M24 18.1431C24.5522 18.1431 25 17.6953 25 17.1431C25 14.0609 22.0712 11.8573 18.8571 11.8573C17.7723 11.8573 16.7454 12.099 15.8514 12.5299C15.3539 12.7697 15.1451 13.3674 15.3849 13.8649C15.6247 14.3624 16.2224 14.5713 16.7199 14.3315C17.3389 14.0331 18.0684 13.8573 18.8571 13.8573C20.8178 13.8573 22.2792 14.8899 22.7961 16.1431H17.5714C17.0191 16.1431 16.5714 16.5908 16.5714 17.1431C16.5714 17.6953 17.0191 18.1431 17.5714 18.1431H24Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M7.71429 6.57143C8.97665 6.57143 10 5.54808 10 4.28571C10 3.02335 8.97665 2 7.71429 2C6.45192 2 5.42857 3.02335 5.42857 4.28571C5.42857 5.54808 6.45192 6.57143 7.71429 6.57143ZM7.71429 8.57143C10.0812 8.57143 12 6.65265 12 4.28571C12 1.91878 10.0812 0 7.71429 0C5.34735 0 3.42857 1.91878 3.42857 4.28571C3.42857 6.65265 5.34735 8.57143 7.71429 8.57143Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M13.0693 15.9991C12.2589 13.83 10.1659 12.2848 7.71429 12.2848C5.26267 12.2848 3.1697 13.83 2.35926 15.9991H13.0693ZM14.4304 17.9991C14.9826 17.9991 15.4354 17.549 15.3646 17.0013C14.8753 13.2122 11.6367 10.2848 7.71429 10.2848C3.79194 10.2848 0.553296 13.2122 0.0639461 17.0013C-0.00679164 17.549 0.445954 17.9991 0.998238 17.9991H14.4304Z"
+                  fill="#6E6E82" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="item-box border border-dark w-100">
+          <div class="item d-flex justify-content-center align-items-center rounded">
+            <a href="#">
+              <svg class="menu-svg" width="24" height="20" viewBox="0 0 24 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="menu-icon"
+                  d="M13.0254 0.386823C13.6406 0.0553242 14.3842 0.0689434 14.9868 0.422748L23.0128 5.13493C23.6245 5.49406 24.0002 6.15032 24.0002 6.85965L24.0002 18.0002C24.0002 19.1047 23.1048 20.0002 22.0002 20.0002H13.0002C12.4479 20.0002 12.0002 19.5525 12.0002 19.0002C12.0002 18.4479 12.4479 18.0002 13.0002 18.0002H22.0002L22.0002 6.85964L13.9742 2.14746L7.97458 5.38051C7.48839 5.6425 6.88187 5.46075 6.61987 4.97457C6.35788 4.48838 6.53962 3.88186 7.02581 3.61987L13.0254 0.386823Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon"
+                  d="M11.0005 9.00018C11.0005 8.4479 11.4482 8.00018 12.0005 8.00018C12.5528 8.00018 13.0005 8.4479 13.0005 9.00018V10.0002C13.0005 10.5525 12.5528 11.0002 12.0005 11.0002C11.4482 11.0002 11.0005 10.5525 11.0005 10.0002V9.00018Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon"
+                  d="M16.0005 8.00018C15.4482 8.00018 15.0005 8.4479 15.0005 9.00018V10.0002C15.0005 10.5525 15.4482 11.0002 16.0005 11.0002C16.5528 11.0002 17.0005 10.5525 17.0005 10.0002V9.00018C17.0005 8.4479 16.5528 8.00018 16.0005 8.00018Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon"
+                  d="M11.0005 13.0002C11.0005 12.4479 11.4482 12.0002 12.0005 12.0002C12.5528 12.0002 13.0005 12.4479 13.0005 13.0002V14.0002C13.0005 14.5525 12.5528 15.0002 12.0005 15.0002C11.4482 15.0002 11.0005 14.5525 11.0005 14.0002V13.0002Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon"
+                  d="M16.0005 12.0002C15.4482 12.0002 15.0005 12.4479 15.0005 13.0002V14.0002C15.0005 14.5525 15.4482 15.0002 16.0005 15.0002C16.5528 15.0002 17.0005 14.5525 17.0005 14.0002V13.0002C17.0005 12.4479 16.5528 12.0002 16.0005 12.0002Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.10742 13.5002C6.90235 13.5002 8.35742 12.0451 8.35742 10.2502C8.35742 8.45526 6.90235 7.00018 5.10742 7.00018C3.3125 7.00018 1.85742 8.45526 1.85742 10.2502C1.85742 12.0451 3.3125 13.5002 5.10742 13.5002ZM5.10742 11.5002C5.79778 11.5002 6.35742 10.9405 6.35742 10.2502C6.35742 9.55983 5.79778 9.00018 5.10742 9.00018C4.41707 9.00018 3.85742 9.55983 3.85742 10.2502C3.85742 10.9405 4.41707 11.5002 5.10742 11.5002Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.1333 19.0042C10.2234 19.5491 9.76737 20.0002 9.21508 20.0002H0.999935C0.44765 20.0002 -0.00840189 19.5491 0.0817357 19.0042C0.512139 16.4024 2.59854 14.4288 5.10751 14.4288C7.61647 14.4288 9.70288 16.4024 10.1333 19.0042ZM5.10751 16.4288C6.10918 16.4288 7.0982 17.0102 7.68346 18.0002H2.53156C3.11682 17.0102 4.10583 16.4288 5.10751 16.4288Z"
+                  fill="#6E6E82" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="item-box border border-dark w-100">
+          <div class="item d-flex justify-content-center align-items-center rounded">
+            <a href="#">
+              <svg class="menu-svg" width="22" height="21" viewBox="0 0 22 21" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="menu-icon"
+                  d="M6 6C6 5.44772 6.44772 5 7 5H15C15.5523 5 16 5.44772 16 6C16 6.55228 15.5523 7 15 7H7C6.44772 7 6 6.55228 6 6Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon"
+                  d="M7 9C6.44772 9 6 9.44771 6 10C6 10.5523 6.44772 11 7 11H15C15.5523 11 16 10.5523 16 10C16 9.44771 15.5523 9 15 9H7Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 2C0 0.895429 0.895431 0 2 0H20C21.1046 0 22 0.89543 22 2V14.25C22 15.3546 21.1046 16.25 20 16.25H11.2856L6.3303 20.741C6.03721 21.0066 5.61511 21.0745 5.2535 20.9142C4.8919 20.7539 4.65876 20.3955 4.65876 20V16.25H2C0.895432 16.25 0 15.3546 0 14.25V2ZM20 2L2 2V14.25H4.65876C5.76333 14.25 6.65876 15.1454 6.65876 16.25V17.7441L9.94251 14.7681C10.3104 14.4347 10.7891 14.25 11.2856 14.25H20V2Z"
+                  fill="#6E6E82" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="item-box border border-dark w-100">
+          <div class="item d-flex justify-content-center align-items-center rounded">
+            <a href="#">
+              <svg class="menu-svg" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 2C0 0.89543 0.895431 0 2 0H20C21.1046 0 22 0.89543 22 2L22 16C22 17.1046 21.1046 18 20 18H2C0.895428 18 0 17.1046 0 16V2ZM20 2L2 2V16H20L20 2Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.100267 6.9534C0.100267 6.40111 0.547983 5.9534 1.10027 5.9534L20.9 5.9534C21.4523 5.9534 21.9 6.40111 21.9 6.9534C21.9 7.50568 21.4523 7.9534 20.9 7.9534L1.10027 7.9534C0.547983 7.9534 0.100267 7.50568 0.100267 6.9534Z"
+                  fill="#6E6E82" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="item-box border border-dark w-100">
+          <div class="item d-flex justify-content-center align-items-center rounded">
+            <a href="#">
+              <svg class="menu-svg" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.000198245 1.99996C0.000219286 0.895407 0.895644 0 2.0002 0H6.0002C7.10478 0 8.00022 0.895454 8.0002 2.00004L8.00012 5.99982C8.0001 7.10438 7.10468 7.99979 6.00012 7.99979H2.00012C0.895538 7.99979 0.000100971 7.10433 0.000122071 5.99975L0.000198245 1.99996ZM6.0002 2H2.0002L2.00012 5.99979H6.00012L6.0002 2Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.0002 1.99996C10.0002 0.895407 10.8956 0 12.0002 0H16.0002C17.1048 0 18.0002 0.895454 18.0002 2.00004L18.0001 5.99982C18.0001 7.10438 17.1047 7.99979 16.0001 7.99979H12.0001C10.8955 7.99979 10.0001 7.10433 10.0001 5.99975L10.0002 1.99996ZM16.0002 2H12.0002L12.0001 5.99979H16.0001L16.0002 2Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.000198245 12C0.000219286 10.8954 0.895644 10 2.0002 10H6.0002C7.10478 10 8.00022 10.8955 8.0002 12.0001L8.00012 15.9999C8.0001 17.1044 7.10468 17.9998 6.00012 17.9998H2.00012C0.895538 17.9998 0.000100971 17.1044 0.000122071 15.9998L0.000198245 12ZM6.0002 12H2.0002L2.00012 15.9998H6.00012L6.0002 12Z"
+                  fill="#6E6E82" />
+                <path class="menu-icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M10.0002 12C10.0002 10.8954 10.8956 10 12.0002 10H16.0002C17.1048 10 18.0002 10.8955 18.0002 12.0001L18.0001 15.9999C18.0001 17.1044 17.1047 17.9998 16.0001 17.9998H12.0001C10.8955 17.9998 10.0001 17.1044 10.0001 15.9998L10.0002 12ZM16.0002 12H12.0002L12.0001 15.9998H16.0001L16.0002 12Z"
+                  fill="#6E6E82" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="content bg-light w-100">
+      <header class="bg-white">
+        <div class="container">
+          <div class="d-flex py-4">
+            <nav class="navigation navbar navbar-expand-lg navbar-light p-0">
+              <a class="nav-logo navbar-brand p-0" href="#">
+                <img src="/img/header/logo.png" alt="logo icon">
+              </a>
+
+              <ul class="list navbar-nav fs-14">
+                <li class="list-item nav-item ml-4">
+                  <a class="nav-link p-0" href="#"><span class="text-dark">Арендодателям</span></a>
+                </li>
+                <li class="list-item nav-item ml-4">
+                  <a class="nav-link p-0" href="#"><span class="text-dark">Арендаторам</span></a>
+                </li>
+                <li class="list-item nav-item ml-4">
+                  <a class="nav-link p-0" href="#"><span class="text-dark">Как это работает?</span></a>
+                </li>
+                <li class="list-item nav-item ml-4">
+                  <a class="nav-link p-0" href="#"><span class="text-dark">Помощь</span></a>
+                </li>
+              </ul>
+
+            </nav>
+            <div class="login-info d-flex align-items-center ml-auto">
+              <div class="notification align-self-center">
+
+                <span class="bell position-relative" data-count="1"><img src="/img/header/bell.svg" class="btn p-0"
+                    alt="notification"></span>
+              </div>
+              <div class="user-info d-flex ml-5">
+                <img src="/img/header/user-icon.svg" alt="person">
+                <h6 class="ml-2 mb-0 font-weight-bold">Иванов Н.С.</h6>
+                <img src="/img/header/arrow-down.svg" class="btn p-0 ml-2" alt="arrow down">
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <a href="#" class="backward nav-link pt-3 pl-0 mb-3"><span class="note text-muted">&lt; Назад без сохранения</span></a>
+
+        <section class="add-item bg-white mb-5 rounded pt-4">
+          <div class="mx-5 py-4">
+            <h3 class="section-header card-title font-weight-bold">Добавить объект недвижимости</h3>
+            <span class="note card-title text-muted">Все поля формы обязательны для заполнения. Вы можете заполнить поля
+              вручную или загрузить данные из ЕГРН.<br>
+              Для проверки данных об объекте недвижимости в ЕГРН укажите Кадастровый номер или Адрес нажмите «Загрузить
+              из
+              ЕГРН».<br>
+              Данные будут актуализированы по результатам проверки</span>
+          </div>
+
+          <hr>
+
+          <form class="form mx-5 py4">
+            <div class="wrapper">
+              <div class="cadastral form-group row flex-nowrap mb-0 pt-4 position-relative">
+                <label for="cadastral-number" class="cadastral-label col-sm-3 col-form-label">Кадастровый номер</label>
+                <span class="tooltips d-inline-block position-absolute" tabindex="0" data-toggle="tooltip"
+                  title="Кадастровый номер является уникальным номером, который присваивается земельному участку.">
+                  <img src="/img/main/tooltip.svg" alt="tooltip">
+                </span>
+
+                <div class="col-sm-10 w-50">
+                  <input type="text" class="cadastral-input form-control w-50 ml-3" id="cadastral-number" value="47:14:1203001:814"
+                    required>
+                  <div class="d-flex w-50 ml-3 my-4">
+                    <div class="line w-50">
+                      <hr>
+                    </div>
+                    <div class="mx-4"><span class="note text-muted">или</span></div>
+                    <div class="line w-50">
+                      <hr>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="address form-group row flex-nowrap">
+                <label for="address" class="address-label col-sm-3 col-form-label">Адрес</label>
+                <div class="col-sm-10 w-50 ml-3 position-relative">
+                  <div class="position-relative">
+                    <img src="/img/main/search.svg" class="search-icon position-absolute" alt="search">
+                    <input type="text" class="address-input form-control w-50" id="address" autocomplete="on" required>
+                  </div>
+                  <p class="mt-3 mb-4">Не нашли адрес? <span class="attention">Укажите вручную</span></p>
+                  <button type="button" class="upload btn active col-sm-3 text-white rounded-0 mb-4"><img
+                      src="img/main/refresh.svg" class="align-bottom" alt="refresh">Загрузить из ЕГРН</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <hr>
+          <form class="form mx-5 py-1">
+            <div class="room-type form-group row my-4">
+              <label class="room-type-label form-check-label col-sm-3 col-form-label">
+                Тип помещения
+              </label>
+              <div class="btn-group btn-group-toggle col-sm-2 ml-3" data-toggle="buttons">
+                <label class="btn btn-radio border">
+                  <input type="radio" class="switch position-absolute"><span class="fs-14">Жилое</span>
+                </label>
+
+                <label class="btn btn-radio border">
+                  <input type="radio" class="switch position-absolute"><span class="fs-14">Нежилое</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="building-type form-group row my-4">
+              <label class="building-type-label form-check-label col-sm-3 col-form-label">
+                Тип недвижимости
+              </label>
+              <div class="btn-group btn-group-toggle col-3 ml-3" data-toggle="buttons">
+                <label class="btn btn-radio border">
+                  <input type="radio" class="switch"><span class="fs-14">Квартира</span>
+                </label>
+
+                <label class="btn btn-radio border">
+                  <input type="radio" class="switch"><span class="fs-14">Комната</span>
+                </label>
+
+                <label class="btn btn-radio border">
+                  <input type="radio" class="switch"><span class="fs-14">Апартаменты</span>
+                </label>
+
+                <label class="btn btn-radio border">
+                  <input type="radio" class="switch"><span class="fs-14">Дом</span>
+                </label>
+
+                <label class="btn btn-radio border">
+                  <input type="radio" class="switch"><span class="fs-14">Парковка</span>
+                </label>
+
+                <label class="btn btn-radio border text-nowrap">
+                  <input type="radio" class="switch"><span class="fs-14">Земельный участок</span>
+                </label>
+              </div>
+            </div>
+          </form>
+
+          <hr>
+
+          <div class="d-flex mx-5 pt-3 pb-4" id="additional-info">
+            <img src="/img/main/attention.svg" class="attention mr-2 mb-1 align-self-center" alt="attention">
+            <h6 class="additional-info-heading mb-0">
+              Дополнительные параметры
+              <button class="arrow-btn btn" data-toggle="collapse" data-target="#sectionCollapse" aria-expanded="true"
+                aria-controls="sectionCollapse">
+                <img src="/img/header/arrow-down.svg" class="arrow-img mb-1" alt="collapse">
+              </button>
+            </h6>
+          </div>
+
+          <div id="sectionCollapse" class="collapse" aria-labelledby="additional-info" data-parent="additional-info">
+            <div class="card-body mx-5 pb-4 pt-0 px-0">
+              <span class="note">Дополнительные параметры не обязательны к заполнению. Однако полная информация об
+                объекте
+                недвижимости
+                повысит его привлекательность для потенциальных арендаторов и риэлторов, которые подыскивают подходящие
+                предложения.</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-object bg-white my-5 shadow rounded pt-4">
+          <div class="mx-5 py-4">
+            <h6 class="section-header card-title font-weight-bold">Об объекте</h6>
+            <form class="form">
+              <div class="rooms-quantity form-group row my-4">
+                <label class="rooms-quantity-label form-check-label col-sm-3 col-form-label">
+                  Количество комнат
+                </label>
+                <div class="btn-group btn-group-toggle col-3 ml-3" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">1</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">2</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">3</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">4</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">5+</span>
+                  </label>
+
+                  <label class="btn btn-radio border text-nowrap">
+                    <input type="radio" class="switch"><span class="fs-14">Студия</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="square form-group row mb-4">
+                <label class="square-label col-sm-3 col-form-label d-flex align-self-center">Площадь</label>
+
+                <div class="d-flex col-sm-3 ml-3">
+                  <label class="control-label "><small class="note">Общая</small>
+                    <input type="text" class="form-control" name="square" placeholder="м²"></label>
+                  <label class="control-label"><small class="note">Жилая</small>
+                    <input type="text" class="form-control" name="square" placeholder="м²"></label>
+                  <label class="control-label"><small class="note">Кухня</small>
+                    <input type="text" class="form-control" name="square" placeholder="м²"></label>
+                </div>
+              </div>
+
+              <div class="floor form-group row mb-0">
+                <label class="floor-label col-sm-3 col-form-label">Этаж</label>
+                <div class="col-sm-1">
+                  <input type="text" class="floor-input form-control ml-3" name="floor" required>
+                </div>
+                <div class="d-flex align-items-center ml-3">
+                  <p class="mb-0">из</p>
+                </div>
+                <div class="col-sm-1">
+                  <input type="text" class="floor-input form-control" name="floor" required>
+                </div>
+              </div>
+
+              <div class="renovation form-group row my-4">
+                <label class="renovation-label form-check-label col-sm-3 col-form-label">
+                  Ремонт
+                </label>
+                <div class="btn-group btn-group-toggle col-3 ml-3" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Косметический</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Евроремонт</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Дизайнерский</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Требуется</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="separate-bathroom form-group row my-4">
+                <label class="separate-bathroom-label form-check-label col-sm-3 col-form-label">
+                  Раздельный санузел
+                </label>
+                <div class="btn-group btn-group-toggle col-3 ml-3" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">0</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">1</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">2</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">3</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">4</span>
+                  </label>
+
+                  <label class="btn btn-radio border text-nowrap">
+                    <input type="radio" class="switch"><span class="fs-14">5</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="combined-bathroom form-group row my-4">
+                <label class="combined-bathroom-label form-check-label col-sm-3 col-form-label">
+                  Совмещенный санузел
+                </label>
+                <div class="btn-group btn-group-toggle col-3 ml-3" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">0</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">1</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">2</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">3</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">4</span>
+                  </label>
+
+                  <label class="btn btn-radio border text-nowrap">
+                    <input type="radio" class="switch"><span class="fs-14">5</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="loggia form-group row my-4">
+                <label class="loggia-label form-check-label col-sm-3 col-form-label">
+                  Лоджия
+                </label>
+                <div class="btn-group btn-group-toggle col-2 ml-3" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Есть</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Нет</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="balcony form-group row my-4">
+                <label class="balcony-label form-check-label col-sm-3 col-form-label">
+                  Балкон
+                </label>
+                <div class="btn-group btn-group-toggle col-2 ml-3" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Есть</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Нет</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="windows form-group row my-4">
+                <label class="windows-label form-check-label col-sm-3 col-form-label">
+                  Окна выходят
+                </label>
+                <div class="btn-group btn-group-toggle col-4 ml-3" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Во двор</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">На улицу</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">В обе стороны</span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="about-building bg-white my-5 shadow rounded pt-4">
+          <div class="mx-5 py-4">
+            <h6 class="section-header card-title font-weight-bold">О здании</h6>
+            <form class="form">
+              <div class="residential form-group row my-4">
+                <label class="residential-label form-check-label col-sm-3 col-form-label">
+                  Жилой комплекс
+                </label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control ml-3" name="brand" placeholder="Введите название ЖК" required>
+                </div>
+              </div>
+
+              <div class="construction-date form-group row my-4">
+                <label class="construction-date-label form-check-label col-sm-3 col-form-label">
+                  Год постройки
+                </label>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control ml-3" name="construction-date" required>
+                </div>
+              </div>
+
+              <div class="room-height form-group row my-4">
+                <label class="room-height-label form-check-label col-sm-3 col-form-label">
+                  Высота потолков
+                </label>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control ml-3" name="room-height" placeholder="м" required>
+                </div>
+              </div>
+
+              <div class="house-type form-group row my-4">
+                <label class="house-type-label form-check-label col-sm-3 col-form-label">
+                  Тип дома
+                </label>
+                <div class="btn-group btn-group-toggle col-3 ml-3" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Монолит</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Кирпич</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Панель</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Блок</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Дерево</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="parking form-group row my-4">
+                <label class="parking-label form-check-label col-sm-3 col-form-label">
+                  Парковка
+                </label>
+                <div class="btn-group btn-group-toggle col-3 ml-3" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Наземная</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Подземная</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Многоуровневая</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14 text-nowrap">На
+                      крыше</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Резидентская</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Отсутствует</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="additional-details form-group row my-4">
+                <label class="additional-details-label form-check-label col-sm-3 col-form-label">
+                  Дополнительно
+                </label>
+                <div class="col-sm-9 d-flex flex-wrap text-nowrap">
+                  <div class="ramp form-check col-3 ml-3 mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="extra">
+                    <label for="extra" class="ramp-label form-check-label ml-2">
+                      Пандус
+                    </label>
+                  </div>
+                  <div class="closed-area form-check col-3 ml-3 mb-2">
+                    <input class="form-check-input" type="checkbox" value="" name="extra">
+                    <label for="extra" class="closed-area-label form-check-label ml-2">
+                      Закрытая территория
+                    </label>
+                  </div>
+                  <div class="passenger-elevator form-check col-3 ml-3 mb-2">
+                    <input class="form-check-input" type="checkbox" value="" name="extra">
+                    <label for="extra" class="passenger-elevator-label form-check-label ml-2">
+                      Пассажирский лифт
+                    </label>
+                  </div>
+                  <div class="security form-check col-3 ml-3 mb-2">
+                    <input class="form-check-input" type="checkbox" value="" name="extra">
+                    <label for="extra" class="security-label form-check-label ml-2">
+                      Охрана/Консьерж
+                    </label>
+                  </div>
+                  <div class="garbage form-check col-3 ml-3 mb-2">
+                    <input class="form-check-input" type="checkbox" value="" name="extra">
+                    <label for="extra" class="garbage-label form-check-label ml-2">
+                      Мусоропровод
+                    </label>
+                  </div>
+                  <div class="service-elevator form-check col-3 ml-3 mb-2">
+                    <input class="form-check-input" type="checkbox" value="" name="extra">
+                    <label for="extra" class="service-elevator-label form-check-label ml-2">
+                      Грузовой лифт
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="about-rent-term bg-white my-5 shadow rounded pt-4">
+          <div class="mx-5 py-4">
+            <h6 class="section-header card-title font-weight-bold mt-2">Срок аренды</h6>
+            <form>
+              <div class="min-rent-term form-group row my-4">
+                <div class="col-sm-3 p-0">
+                  <label class="min-rent-term-label form-check-label col-sm-6">
+                    Минимальный срок аренды
+                  </label>
+                </div>
+                <div class="input-group col-4 ml-3" data-toggle="buttons">
+                  <input type="text" class="form-control" name="rent">
+                  <div class="input-group-prepend">
+                    <label class="btn btn-radio border">
+                      <input type="radio" class="switch"><span class="fs-14">Дней</span>
+                    </label>
+                  </div>
+                  <div class="input-group-prepend">
+                    <label class="btn btn-radio border">
+                      <input type="radio" class="switch"><span class="fs-14">Месяцев</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <h6 class="section-header card-title font-weight-bold">Условия сделки</h6>
+
+              <div class="price form-group row my-4">
+                <label class="price-label form-check-label col-sm-3 col-form-label">
+                  Цена
+                </label>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control ml-3" name="price" placeholder="₽/мес." required>
+                </div>
+              </div>
+
+              <div class="sublease form-group row my-4">
+                <label class="sublease-label form-check-label col-sm-3 col-form-label">
+                  Возможна субаренда
+                </label>
+                <div class="btn-group btn-group-toggle col-2 ml-3" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Да</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Нет</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="deposit form-group row my-4 d-flex align-items-center">
+                <div class="col-sm-3 p-0">
+                  <label class="deposit-label form-check-label col-sm-3 col-form-label">
+                    Размер обеспечительного платежа
+                  </label>
+                </div>
+                <div class="deposit-amount col-2 ml-3">
+                  <select class="custom-select">
+                    <option value="100%" selected>100%</option>
+                    <option value="50%">50%</option>
+                    <option value="25%">25%</option>
+                    <option value="10%">10%</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="communal-payments form-group row my-4 d-flex align-items-center">
+                <div class="col-sm-3 p-0">
+                  <label class="communal-payments-label form-check-label col-sm-3 col-form-label">
+                    Коммунальные платежи
+                  </label>
+                </div>
+                <div class="btn-group btn-group-toggle col-2 ml-3" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Включены</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14 text-nowrap">Не включены</span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="privacy bg-white my-5 shadow rounded pt-4">
+          <div class="mx-5 py-4">
+            <h6 class="section-header card-title font-weight-bold">Приватность</h6>
+            <form>
+              <div class="access-realtors form-group row my-4 ml-1 d-flex align-items-center">
+                <img src="/img/main/access-realtor.svg" class="access-realtors-img" alt="access">
+                <div class="col-sm-3 p-0">
+                  <label class="access-realtors-label form-check-label col-sm-9 col-form-label">
+                    Доступность для просмотра риэлторам
+                  </label>
+                  <span class="tooltips d-inline-block position-absolute" tabindex="0" data-toggle="tooltip"
+                    title="Доступность для просмотра риэлторам">
+                    <img src="/img/main/tooltip.svg" alt="tooltip">
+                  </span>
+                </div>
+                <div class="btn-group btn-group-toggle col-2" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Да</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Нет</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="access-all form-group row my-4 ml-1 d-flex align-items-center">
+                <img src="/img/main/access-all.svg" class="access-all-img" alt="access">
+                <div class="col-sm-3 p-0 position-relative">
+                  <label class="access-all-label form-check-label col-sm-11 col-form-label">
+                    Доступ к просмотру объекта недвижимости
+                  </label>
+                </div>
+                <div class="btn-group btn-group-toggle col-2 text-nowrap ml-1" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Всем</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Только контактам</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Конкретным контактам</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Только мне</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="access-link form-group row my-4 ml-1 d-flex align-items-center">
+                <img src="/img/main/access-link.svg" class="access-link-img" alt="access">
+                <div class="col-sm-3 p-0">
+                  <label class="access-link-label form-check-label col-sm-11 col-form-label">
+                    Объект недвижимости доступен по ссылке
+                  </label>
+                </div>
+                <div class="btn-group btn-group-toggle col-2" data-toggle="buttons">
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Да</span>
+                  </label>
+
+                  <label class="btn btn-radio border">
+                    <input type="radio" class="switch"><span class="fs-14">Нет</span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="submit-section bg-white my-5 shadow rounded">
+          <div class="mx-5 py-5 d-flex justify-content-between">
+            <button type="button" class="cancel-btn btn col-sm-3 border rounded-0">Отмена</button>
+            <button type="button" class="add-btn btn active col-sm-3 text-white rounded-0">Добавить</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="footer py-5 fs-14">
+    <div class="container row m-auto">
+      <div class="info d-flex col p-0">
+        <div class="portal col-3 pl-0">
+          <h6 class="attention">О портале</h6>
+          <ul class="list navbar-nav mt-4">
+            <li class="list-item nav-item"><a class="nav-link" href="#"><span class="text-white">Как это работает?</span></a></li>
+            <li class="list-item nav-item"><a class="nav-link" href="#"><span class="text-white">Журнал о аренде</span></a></li>
+            <li class="list-item nav-item"><a class="nav-link" href="#"><span class="text-white">Помощь</span></a></li>
+            <li class="list-item nav-item"><a class="nav-link" href="#"><span class="text-white">Контактная информация</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="service col-4">
+          <h6 class="attention">Работа с сервисом</h6>
+          <ul class="list navbar-nav mt-4">
+            <li class="list-item nav-item "><a class="nav-link" href="#"><span class="text-white">Собственникам</span></a></li>
+            <li class="list-item nav-item"><a class="nav-link" href="#"><span class="text-white">Арендаторам</span></a></li>
+            <li class="list-item nav-item"><a class="nav-link" href="#"><span class="text-white">Агентствам
+                  недвижимости</span></a></li>
+            <li class="list-item nav-item"><a class="nav-link" href="#"><span class="text-white">Поставщикам услуг</span></a></li>
+          </ul>
+        </div>
+        <div class="docs col-4">
+          <h6 class="attention">Документы</h6>
+          <ul class="list navbar-nav mt-4">
+            <li class="list-item nav-item"><a class="nav-link" href="#"><span class="text-white">Политика
+                  конфиденциальности</span></a></li>
+            <li class="list-item nav-item"><a class="nav-link" href="#"><span class="text-white">Согласие на обработку
+                  данных</span></a></li>
+            <li class="list-item nav-item"><a class="nav-link" href="#"><span class="text-white">Условия пользования
+                  сервисом</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="subscribe col d-flex flex-column justify-content-between">
+        <div class="apps d-flex align-items-center ">
+          <h6 class="attention col-4 p-0">Скачайте приложение</h6>
+          <button class="social-btn btn text-white mr-2"><img src="/img/footer/google-play.svg" class="align-bottom"
+              alt="google">Google Play</button>
+          <button class="social-btn btn text-white mr-2"><img src="/img/footer/app-store.svg" class="align-bottom"
+              alt="app-store">App Store</button>
+        </div>
+        <div class="payments d-flex align-items-center">
+          <h6 class="attention col-4 p-0">Платежные сервисы</h6>
+          <img src="/img/footer/visa.png" class="visa mr-2" alt="visa">
+          <img src="/img/footer/master-card.png" class="master-card mr-2" alt="master card">
+          <img src="/img/footer/mir.png" class="mir mr-2" alt="mir">
+        </div>
+        <div class="copyright d-flex border-top border-secondary pt-4">
+          <p class="text-white note mb-0">
+            © ООО "Цифровые Технологии" - Организация АО “ДОМ.РФ”, оператор единой информационной
+            системы учета договоров найма (поднайма) жилых помещений, 2019 г
+          </p>
+          <img src="/img/footer/logo-footer.svg" class="footer-img" alt="ДОМ.рф">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
